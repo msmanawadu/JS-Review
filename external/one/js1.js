@@ -1,0 +1,1 @@
+document.write("<h1 align = center> Internet Technology </h1> <p> <font color = blue> Learn javascript in the easy way </font> </p>");
