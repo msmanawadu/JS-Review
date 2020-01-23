@@ -1,14 +1,16 @@
 <html>
-<head></head>
+<head>
+<script language = "javascript" type = "text/javascript">
+function getUName(){
+    var uName = prompt("Enter username", "");
+    return uName;
+}    
+</script>
+</head>
 <body>
-<script language = "javascript" type = " text/javascript">
-var uName = prompt("Enter username", "");
-if(uName !== null){
-    alert("Good day, " + uName);
-}
-else{
-    alert("Good Bye !");
-}
+<script language = "javascript" type = "text/javascript">
+var uName1 = getUName();
+alert("Hello and Welcome " + uName1);
 </script>
 </body>
 </html>
