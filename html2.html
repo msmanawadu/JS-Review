@@ -1,15 +1,11 @@
 <html>
-<head>
-<script language = "javascript" type = "text/javascript">
-    function display(name1){
-        alert("Hello and Welcome " + name1);
-    }    
-</script>
-</head>
+<head></head>
 <body>
 <script language = "javascript" type = "text/javascript">
-var uName = prompt("Enter username ", "");
-display(uName);
+var str = "welcome";
+document.write("In bold letters = " + str.bold() + "<br/>");
+document.write("In uppercase = " + str.toUpperCase() + "<br/>");
+document.write("with the characters come = " + str.substring(3,7));
 </script>
 </body>
 </html>
