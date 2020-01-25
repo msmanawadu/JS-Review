@@ -1,9 +1,18 @@
 <html>
-<head></head>
-<body>
+<head>
 <script language = "javascript" type = "text/javascript">
-var r = prompt("Enter radius value", "");
-document.write("The circumference is = " + 2*Math.PI*r); 
+function displayAlert(){
+    window.alert("Welcome to NIBM");
+}
+function colorChange(){
+    document.bgColor = "blue";
+}
 </script>
+</head>
+<body>
+<form>
+<input type = "button" name = "data" value = "Click Me !"
+onClick = "displayAlert(); colorChange();"/>
+</form>
 </body>
 </html>
