@@ -1,10 +1,18 @@
 <html>
-<head></head>
-<body>
+<head>
 <script language = "javascript" type = "text/javascript">
-var str = "HAVE A NICE DAY";
-document.write("In lowercase = " + str.toLowerCase() + "<br>");
-document.write("with characters nice = " + str.substring(7,11));
+function mouseOver(){
+    document.bgColor = "red";
+}
+function mouseOut(){
+    document.bgColor = "yellow";
+}
 </script>
+</head>
+<body>
+<a href = "http://wherever.com" onMouseOver = "mouseOver();"
+OnMouseOut = "mouseOut();">
+Hyperlink Text
+</a>  
 </body>
 </html>
