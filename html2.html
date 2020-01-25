@@ -1,9 +1,15 @@
 <html>
-<head></head>
+<head>
+<script language = "javascript" type = "text/javascript">
+function keyDown(){
+    window.alert("Key Pressed Down !");
+}
+</script>
+</head>
 <body>
-<a href = "html1.html" onMouseOver = 'document.bgColor = "red";' 
-onMouseOut = 'document.bgColor = "yellow";'>
-Hyperlink text
-</a>
+<form>
+Lable: <input type = "text" name = "data"
+onKeyDown = "keyDown();"
+</form>
 </body>
 </html>
