@@ -1,18 +1,20 @@
 <html>
 <head>
 <script language = "javascript" type = "text/javascript">
-function mouseOver(){
-    document.bgColor = "red";
+function closeWindow() {
+    window.close();
 }
-function mouseOut(){
-    document.bgColor = "yellow";
+function resizeWindow() {
+    window.resizeTo(500,500);
 }
 </script>
 </head>
 <body>
-<a href = "http://wherever.com" onMouseOver = "mouseOver();"
-OnMouseOut = "mouseOut();">
-Hyperlink Text
-</a>  
+<form>
+<input type = "button" name = "cmd1" value = "Button1"
+onClick = "closeWindow();"/> <br>
+<input type = "button" name = "cmd2" value = "Button2"
+onClick = "resizeWindow();"/>
+</form>
 </body>
 </html>
