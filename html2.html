@@ -1,15 +1,25 @@
 <html>
 <head>
 <script language = "javascript" type = "text/javascript">
-function keyDown(){
-    window.alert("Key Pressed Down !");
+function validate() {
+    if(document.form1.uName.value == "") {
+        window.alert("Username cannot be empty");
+        return;
+    }
+        if(document.form1.passWord.value.length <= 6) {
+            window.alert("Password should be more than 6 characters");
+            return;
+        }
+    window.alert("Thank you for your response");
 }
 </script>
 </head>
 <body>
-<form>
-Lable: <input type = "text" name = "data"
-onKeyDown = "keyDown();"
+<form name = "form1">
+Username: <input type = "text" name = "uName"/> <br>
+Password: <input type = "password" name = "passWord"/> <br>
+<input type = "button" name = "cmd1" value = "Validate"
+onClick = "validate();" />
 </form>
 </body>
 </html>
