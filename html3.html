@@ -1,20 +1,48 @@
 <html>
 <head>
 <script language = "javascript" type = "text/javascript">
-function closeWindow() {
-    window.close();
-}
-function resizeWindow() {
-    window.resizeTo(500,500);
+function validate() {
+    if(document.form1.cName.value == "") {
+        window.alert("Customer Name cannot be empty");
+        return;
+    }
+    if(isNaN(document.form1.pONo.value)) {
+        window.alert("Please enter numeric values for Purchase Order No");
+        return;
+    }
+    if((!document.form1.delivery[0].checked) && (!document.form1.delivery[1].checked)) {
+        window.alert("Please select a Delivery Method");
+        return;
+    }
+    if(document.form1.payment.selectedIndex == 0) {
+        window.alert("Please select a Payment Method");
+        return;
+    }
+    if(!document.form1.condition.checked) {
+        window.alert("Do you agree with our terms and conditions ?")
+        return;
+    }
+    window.alert("Thank you for your information");
 }
 </script>
 </head>
 <body>
-<form>
-<input type = "button" name = "cmd1" value = "Button1"
-onClick = "closeWindow();"/> <br>
-<input type = "button" name = "cmd2" value = "Button2"
-onClick = "resizeWindow();"/>
+<h1> Colombo West Accessories </h1>
+<h2><u> Order Confirmation </u></h2>
+<form name = "form1">
+Customer Name: <input type = "text" name = "cName"/> <br>
+Purchase Order No: <input type = "text" name = "pONo" /> <br>
+Delivery Method: <input type = "radio" name = "delivery" value = "O" /> Ordinary Post
+<input type = "radio" name = "delivery" value = "S" /> Speed Post <br>
+Payment Method: <select name = "payment">
+<option value = "E-P-M" selected> Enter Payment Method </option>
+<option value = "Cash"> Cash </option>
+<option value = "Cheque"> Cheque </option>
+<option value = "Credit Card"> Credit Card </option>
+</select> <br>
+I agree to the terms and conditions <input type = "checkbox" name = "condition" value = "Y"> <br>
+<input type = "button" name = "cmd1" value = "Validate"
+onClick = "validate();"/>
 </form>
 </body>
 </html>
