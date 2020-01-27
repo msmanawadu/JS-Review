@@ -1,0 +1,73 @@
+<html>
+<head>
+<script language = "javascript" type = "text/javascript">
+function validate() {
+    if(document.form1.name.value == "") {
+        window.alert("Please provide your name");
+        return;
+    }
+    if(document.form1.address.value.length == 0) {
+        window.alert("Please provide your address");
+        return;
+    }
+    if(isNaN(document.form1.telephone.value)) {
+        window.alert("Telephone number should contain only numerals");
+        return;
+    }
+    if(document.form1.rooms.selectedIndex == 0) {
+        window.alert("Please select number of rooms");
+        return;
+    }
+    // Radio button validation - Method 1
+    if((!document.form1.roomType[0].checked) && (!document.form1.roomType[1].checked)) {
+        window.alert("Please select a room type");
+        return;
+    }
+    /* Radio button validation - Method 2 
+    var status = "no";
+    for(i=0; i<document.form1.roomType.length; i++) {
+        if(document.form1.roomType[i].checked) {
+            status = "yes";
+        }
+    }
+    if(status == "no") {
+        window.alert("Please select a room type");
+        return;
+    }*/
+    if((!document.form1.extras1.checked) && (!document.form1.extras2.checked) && (!document.form1.extras3.checked)) {
+        window.alert("Please select an extra service");
+        return;
+    }
+    window.alert("Thank you for your reservation");
+}
+</script>
+</head>
+<body>
+<h1> <u> Sun Ray Holiday Resorts </u></h1>
+<h2><u> Room Reservation </u></h2>
+<form name = "form1">
+Name: <input type = "text" name = "name"/> <br>
+Address: <input type = "text" name = "address"/> <br>
+Telephone: <input type = "text" name = "telephone"/> <br> <br>
+No.of Rooms: <select name = "rooms">
+<option value = "select" selected> Select the no of rooms </option>
+<option value = "1"> 1 </option>
+<option value = "2"> 2 </option>
+<option value = "3"> 3 </option>
+<option value = "4"> 4 </option>
+<option value = "5"> 5 </option>
+</select> <br> <br>
+Type of Room: <br>
+<input type = "radio" name = "roomType" value = "Sea"/> Sea side 
+<input type = "radio" name = "roomType" value = "Hill"/> Hill side <br> <br>
+Extras: <br>
+<input type = "checkbox" name = "extras1" value = "meals"> Meals 
+<input type = "checkbox" name = "extras2" value = "pool"> Pool 
+<input type = "checkbox" name = "extras3" value = "tv"> TV <br> <br>
+
+<input type = "button" name = "cmd1" value = "Validate data" onClick = "validate();" />
+<input type = "submit" name = "cmd2" value = "Reserve"/>
+<input type = "reset" name = "cmd3" value = "Cancel" />
+</form>
+</body>
+</html>
