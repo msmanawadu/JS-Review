@@ -1,17 +1,55 @@
 <html>
 <head>
 <script language = "javascript" type = "text/javascript">
-function buttonClick() {
-    document.bgColor = "yellow";
-    document.fgColor = "red";
+function validate() {
+    if(document.form1.sName.value == "") {
+        window.alert("Please enter student's name");
+        return;
+    }
+    if(isNaN(document.form1.grade.value)) {
+        window.alert("Please enter numeric values for grade");
+        return;
+    }
+    if(document.form1.flavor.selectedIndex == 0) {
+        window.alert("Please select a flavor");
+        return;
+    }
+    // validating radio button in Method 2
+    var status = "no";
+    for(i=0; i< document.form1.frequency.length; i++) {
+        if(document.form1.frequency[i].checked) {
+            status = "yes";
+        }
+    }
+    if(status == "no") {
+        window.alert("How often do you have ice creame ?");
+        return;
+    }
+    window.alert("Thank you for you information");
 }
 </script>
 </head>
 <body>
-<h1 align = "center"> Hello World </h1>
-<form>
-<center> <input type = "button" name = "cmd1" value = "My Button"
-onClick = "buttonClick();"/> </center>
+<h1> Colombo High School </h1>
+<h2> <u> Survey Data </u></h2>
+<form name = "form1">
+Student Name: <input type = "text" name = "sName"/> <br>
+Grade: <input type = "text" name = "grade"/> <br>
+Which ice creame flavor do you like ? 
+<select name = "flavor">
+<option value = "S-F" selected> Select Flavor </option>
+<option value = "Chocolate"> Chocolate </option>
+<option value = "Vanilla"> Vanilla </option>
+<option value = "Strawberry"> Strawberry </option>
+</select> <br>
+How often so you have ice cream ?
+<input type = "radio" name = "frequency" value = "daily"/> Every Day
+<input type = "radio" name = "frequency" value = "weekly"/> Every week
+<input type = "radio" name = "frequency" value = "monthly"/> Once a month 
+<input type = "radio" name = "frequency" value = "rarely"/> Very rarely <br>
+
+<input type = "button" name = "cmd1" value = "Validate"
+onClick = "validate();"/>
 </form>
 </body>
 </html>
