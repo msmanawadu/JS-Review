@@ -10,10 +10,24 @@ function validate() {
         window.alert("Please enter numeric values for Purchase Order No");
         return;
     }
+    
     if((!document.form1.delivery[0].checked) && (!document.form1.delivery[1].checked)) {
         window.alert("Please select a Delivery Method");
         return;
     }
+
+    /* Method 2 - Validating Radio Button Groups
+    var status = "no";
+    for(i=0; i<document.form1.delivery.length; i++) {
+        if(document.form1.delivery[i].checked){
+            status = "yes";
+        }
+    }
+        if(status == "no"){
+        window.alert("Please select a Delivery Method");
+        return; 
+        } */ 
+
     if(document.form1.payment.selectedIndex == 0) {
         window.alert("Please select a Payment Method");
         return;
