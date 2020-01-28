@@ -1,0 +1,73 @@
+<html>
+<head>
+<script language = "javascript" type = "text/javascript">
+function validate() {
+    if(document.form1.name.value == "") {
+        window.alert("Please enter your name");
+        return;
+    }
+    if(document.form1.address.value.length == 0) {
+        window.alert("Please enter your address");
+        return;
+    }
+    if(isNaN(document.form1.telephone.value)) {
+        window.alert("Please enter numeric values for telephone number");
+        return;
+    }
+    if(isNaN(document.form1.courseNo.value)) {
+        window.alert("Please enter numeric values for course number");
+        return;
+    }
+    // Radio button validation - Method 1
+    if((!document.form1.sponser[0].checked) && (!document.form1.sponser[1].checked)) {
+        window.alert("Are you sponsored by your organization ?");
+        return;
+    }
+
+    /* Radio button validation - Method 2
+    var status = "no";
+    for(i=0; i<document.form1.sponser.length; i++) {
+        if(document.form1.sponser[i].checked) {
+            status = "yes";
+        }
+    }
+    if(status == "no") {
+        window.alert("Are you sponsored by your organization ?");
+        return;
+    }
+    */
+
+    if(document.form1.center.selectedIndex == 0) {
+        window.alert("Please select a center to follow the course");
+        return;
+    }
+    window.alert("Thank you for the registration");
+}
+</script>
+</head>
+<body>
+<h1> <u> Colombo Institute of Education </u></h1>
+<h2> <u> Course Registration Form </u></h2>
+<form name = "form1">
+Name: <input type = "text" name = "name"/> <br>
+Address: <input type = "text" name = "address"/> <br>
+Telephone: <input type = "text" name = "telephone"/> <br>
+Selected Course No: <input type = "text" name = "courseNo"/> <br>
+Are you sponsored by your organization ? : 
+<input type = "radio" name = "sponser" value = "Y" /> Yes 
+<input type = "radio" name = "sponser" value = "N" /> No <br>
+Please select a center to follow the course: 
+<select name = "center">
+<option value = "S-C" selected> Select Center </option>
+<option value = "Colombo"> Colombo </option>
+<option value = "Kandy"> Kandy </option>
+<option value = "Matara"> Matara </option>
+<option value = "Kurunegala"> Kurunegala </option>
+<option value = "Galle"> Galle </option>
+</select> <br>
+<input type = "button" name = "cmd1" value = "Register"
+onClick = "validate();"/>
+<input type = "reset" name = "cmd2" value = "Cancel"/>
+</form>
+</body>
+</html>
