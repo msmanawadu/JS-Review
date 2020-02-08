@@ -1,25 +1,16 @@
 <html>
 <head>
 <script language = "javascript" type = "text/javascript">
-function validate(){
-    if(document.form1.cName.value == "") {
-        window.alert("Name feild cannot be empty");
-        return;
-    }
-        if(document.form1.cAddress.value.length == 0) {
-            window.alert("Address feild cannot be empty");
-            return;
-        }
-    window.alert("Thank you for your response");
+function mouseClick(){
+    document.bgColor = "yellow";
+    document.fgColor = "red";
 }
 </script>
 </head>
 <body>
-<form name = "form1">
-Name: <input type = "text" name = "cName" /> <br>
-Address: <input type = "text" name = "cAddress" /> <br>
-<input type = "button" name = "cmd1" value = "Validate"
-onClick = "validate();" />
+<h1 align = "center">NIBM Diploma Really Really SUCKS !</h1>
+<form>
+<input type = "button" name = "cmd" value = "Click Me" onClick = "mouseClick();"/>
 </form>
 </body>
 </html>
