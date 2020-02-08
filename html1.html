@@ -1,16 +1,64 @@
 <html>
 <head>
 <script language = "javascript" type = "text/javascript">
-function mouseClick(){
-    document.bgColor = "yellow";
-    document.fgColor = "red";
+function validate(){
+    if(document.form1.name.value == ""){
+        window.alert("Please enter name");
+        return false;
+    }
+    if(document.form1.telephone.value.length == 0){
+        window.alert("Please enter telephone number");
+        return false;
+    }
+    if(isNaN(document.form1.telephone.value)){
+        window.alert("Telephone number should contain only numerals");
+        return false;
+    }
+    if(document.form1.generator.selectedIndex == 0){
+        window.alert("Please select the location");
+        return false;
+    }
+    // radio button group validation - method 1 
+    if((!document.form1.fuelType[0].checked)&&(!document.form1.fuelType[1].checked)){
+        window.alert("Please select fuel type");
+        return false;
+    }
+    /* radio button group validation - method 2
+    var status = "no";
+    for(i=0; i<document.form1.fuelType.length; i++){
+        if(document.form1.fuelType[i].checked){
+            status = "yes";
+        }
+    }
+    if(status == "no"){
+        window.alert("Please select fuel type");
+        return false;
+    }
+    */
+    window.alert("Thank you for the details");
 }
 </script>
 </head>
 <body>
-<h1 align = "center">NIBM Diploma Really Really SUCKS !</h1>
-<form>
-<input type = "button" name = "cmd" value = "Click Me" onClick = "mouseClick();"/>
+<h1>Sun Generators Ltd</h1>
+<h3>Do you need help selecting a generator for your home or business ?</h3>
+<h3>Send us the following details:</h3>
+<form name = "form1" method = "POST" onsubmit = "return validate();">
+Name: <input type = "text" name = "name"/> <br>
+Telephone Number: <input type = "text" name = "telephone"/> <br>
+Where do you want to install the generator ? 
+<select name = "generator">
+<option value = "S-L" selected>Select Location</option>
+<option value = "Home">Home</option>
+<option value = "Retail">Retail</option>
+<option value = "Other">Other</option>
+</select> <br>
+What is the fuel type you require ?
+<input type = "radio" name = "fuelType" value = "Petrol"/> Petrol
+<input type = "radio" name = "fuelType" value = "Diesel"/> Diesel <br>
+
+<input type = "submit" name = "cmd1" value = "Send"/>
+<input type = "reset" name = "cmd2" value = "Cancel"/>
 </form>
 </body>
 </html>
