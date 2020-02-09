@@ -35,6 +35,10 @@ function validate(){
         return false;
     }
     */
+    if(document.form1.cmd1.value == ""){
+        window.alert("Please choose a file");
+        return false;
+    }
     window.alert("Thank you for the details");
 }
 </script>
@@ -43,7 +47,7 @@ function validate(){
 <h1>Sun Generators Ltd</h1>
 <h3>Do you need help selecting a generator for your home or business ?</h3>
 <h3>Send us the following details:</h3>
-<form name = "form1" method = "POST" onsubmit = "return validate();">
+<form name = "form1" method = "POST" onsubmit = "return validate();" enctype = "multipart/form-data">
 Name: <input type = "text" name = "name"/> <br>
 Telephone Number: <input type = "text" name = "telephone"/> <br>
 Where do you want to install the generator ? 
@@ -56,9 +60,11 @@ Where do you want to install the generator ?
 What is the fuel type you require ?
 <input type = "radio" name = "fuelType" value = "Petrol"/> Petrol
 <input type = "radio" name = "fuelType" value = "Diesel"/> Diesel <br>
+Please attach details of the floor plan and power requirements: <br>
+<input type = "file" name = "cmd1"/> <br>
 
-<input type = "submit" name = "cmd1" value = "Send"/>
-<input type = "reset" name = "cmd2" value = "Cancel"/>
+<input type = "submit" name = "cmd2" value = "Send"/>
+<input type = "reset" name = "cmd3" value = "Cancel"/>
 </form>
 </body>
 </html>
