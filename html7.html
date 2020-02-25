@@ -1,0 +1,34 @@
+<html>
+<head>
+<script language = "javascript" type = "text/javascript">
+function calGrade(v1) {
+    if(v1 < 50 ) {
+        var v2 = "Fail";
+        return v2;
+    }
+    else {
+        var v2 = "Pass";
+        return v2;
+    }
+
+}
+</script>
+</head>
+<body>
+<script language = "javascript" type = "text/javascript">
+var studentID = prompt("Enter Student ID","");
+var marks1 = prompt("Enter marks1","");
+var marks2 = prompt("Enter marks2","");
+var marks3 = prompt("Enter marks3","");
+
+var sum = parseInt(marks1) + parseInt(marks2) + parseInt(marks3);
+var avg = sum / 3.0;
+var grade = calGrade(avg);
+
+document.write("Student ID : ", studentID + "<br>");
+document.write("Sum : ", sum + "<br>");
+document.write("Average Marks : ", avg + "<br>");
+document.write("Grade : ", grade);
+</script>
+</body>
+</html>
