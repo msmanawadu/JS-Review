@@ -12,6 +12,12 @@ function calGrade(v1) {
     }
 
 }
+function display(v3, v4, v5, v6) {
+    document.write("Student ID : ", v3 + "<br>");
+    document.write("Sum : ", v4 + "<br>");
+    document.write("Average Marks : ", v5 + "<br>");
+    document.write("Grade : ", v6);
+}
 </script>
 </head>
 <body>
@@ -24,11 +30,7 @@ var marks3 = prompt("Enter marks3","");
 var sum = parseInt(marks1) + parseInt(marks2) + parseInt(marks3);
 var avg = sum / 3.0;
 var grade = calGrade(avg);
-
-document.write("Student ID : ", studentID + "<br>");
-document.write("Sum : ", sum + "<br>");
-document.write("Average Marks : ", avg + "<br>");
-document.write("Grade : ", grade);
+display(studentID, sum, avg, grade);
 </script>
 </body>
 </html>
