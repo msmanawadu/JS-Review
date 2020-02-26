@@ -1,5 +1,11 @@
 <html>
 <head>
+<script language = "javascript" type = "text/javascript">
+function display(v3){
+document.write("X to the power Y is = ", v3);
+//window.alert("X to the power Y is = " + v3);
+}
+</script>
 </head>
 <body>
 <script language = "javascript" type = "text/javascript">
@@ -10,8 +16,7 @@ var x = parseInt(v1);
 var y = parseInt(v2);
 
 var result = Math.pow(x,y);
-document.write("X to the power Y is = ", result);
-//window.alert("X to the power Y is = " + result);
+display(result);
 </script>
 </body>
 </html>
