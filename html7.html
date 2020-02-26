@@ -1,36 +1,16 @@
 <html>
 <head>
 <script language = "javascript" type = "text/javascript">
-function calGrade(v1) {
-    if(v1 < 50 ) {
-        var v2 = "Fail";
-        return v2;
-    }
-    else {
-        var v2 = "Pass";
-        return v2;
-    }
-
-}
-function display(v3, v4, v5, v6) {
-    document.write("Student ID : ", v3 + "<br>");
-    document.write("Sum : ", v4 + "<br>");
-    document.write("Average Marks : ", v5 + "<br>");
-    document.write("Grade : ", v6);
+function buttonClick() {
+    document.bgColor = "yellow";
+    document.fgColor = "red";
 }
 </script>
 </head>
 <body>
-<script language = "javascript" type = "text/javascript">
-var studentID = prompt("Enter Student ID","");
-var marks1 = prompt("Enter marks1","");
-var marks2 = prompt("Enter marks2","");
-var marks3 = prompt("Enter marks3","");
-
-var sum = parseInt(marks1) + parseInt(marks2) + parseInt(marks3);
-var avg = sum / 3.0;
-var grade = calGrade(avg);
-display(studentID, sum, avg, grade);
-</script>
+<h1 align = "center"> NIBM Diploma </h1>
+<form name = "form1">
+<input type = "button" name = "cmd1" value = "Click Me" onClick = "buttonClick();">
+</form>
 </body>
 </html>
