@@ -1,16 +1,17 @@
 <html>
 <head>
-<script language = "javascript" type = "text/javascript">
-function buttonClick() {
-    document.bgColor = "yellow";
-    document.fgColor = "red";
-}
-</script>
 </head>
 <body>
-<h1 align = "center"> NIBM Diploma </h1>
-<form name = "form1">
-<input type = "button" name = "cmd1" value = "Click Me" onClick = "buttonClick();">
-</form>
+<script language = "javascript" type = "text/javascript">
+var v1 = prompt("Enter value for X","");
+var v2 = prompt("Enter value for Y","");
+
+var x = parseInt(v1);
+var y = parseInt(v2);
+
+var result = Math.pow(x,y);
+document.write("X to the power Y is = ", result);
+//window.alert("X to the power Y is = " + result);
+</script>
 </body>
 </html>
