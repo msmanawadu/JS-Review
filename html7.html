@@ -1,22 +1,17 @@
 <html>
-<head>
-<script language = "javascript" type = "text/javascript">
-function display(v3){
-document.write("X to the power Y is = ", v3);
-//window.alert("X to the power Y is = " + v3);
-}
-</script>
-</head>
+<head></head>
 <body>
 <script language = "javascript" type = "text/javascript">
-var v1 = prompt("Enter value for X","");
-var v2 = prompt("Enter value for Y","");
+var v1 = prompt("Enter value for Radius","");
+var v2 = prompt("Enter value for Height","");
 
-var x = parseInt(v1);
-var y = parseInt(v2);
+var r = parseInt(v1);
+var h = parseInt(v2);
 
-var result = Math.pow(x,y);
-display(result);
+var result1 = Math.pow(r,2);
+var result2 = Math.PI * result1 * h;
+var result3 = Math.round(result2);
+document.write("Volume of the Cylinder is = ", result3);
 </script>
 </body>
 </html>
