@@ -1,6 +1,8 @@
-var v1 = prompt("Enter Radius","");
-var r = parseInt(v1);
+var v1 = prompt("Enter 1st number","");
+var v2 = prompt("Enter 2nd number", "");
 
-var p = 2*Math.PI*r;
-var result = Math.round(p);
-document.write("Perimeter is = " + result);
+var a = parseInt(v1);
+var b = parseInt(v2);
+
+var m = Math.max(a,b);
+document.write("The maximum is = " + m);
