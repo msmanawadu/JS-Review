@@ -1,5 +1,4 @@
-if(confirm("Do you want to log out")){
-    alert("Good Bye!");
-} else {
-    alert("Please continue your work!");
-}
+var num1 = 10;
+var num2 = 20;
+var sum = num1 + num2;
+document.write("Sum is = ", sum);
