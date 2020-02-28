@@ -5,4 +5,4 @@ var x = parseInt(v1);
 var y = parseInt(v2);
 
 var result = product(x,y);
-alert("the product is = " + result);
+display(result);
