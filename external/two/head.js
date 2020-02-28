@@ -1,4 +1,4 @@
-function start() {
-    var uName = prompt("Enter username","");
-    return uName;
+function product(a,b){
+var c = a*b;
+alert("product is " + c);
 }
