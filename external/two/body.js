@@ -1,5 +1,6 @@
-var str = "HAVE A NICE DAY";
-var str1 = str.bold();
-var str2 = str.toLowerCase();
-var str3 = str.substring(7,11);
-display(str1,str2,str3);
+var v1 = prompt("Enter Radius","");
+var r = parseInt(v1);
+
+var p = 2*Math.PI*r;
+var result = Math.round(p);
+document.write("Perimeter is = " + result);
