@@ -1,8 +1,5 @@
-var v1 = prompt("Enter value 1","");
-var v2 = prompt("Enter value 2","");
-
-var x = parseInt(v1);
-var y = parseInt(v2);
-
-var result = product(x,y);
-display(result);
+var str = "HAVE A NICE DAY";
+var str1 = str.bold();
+var str2 = str.toLowerCase();
+var str3 = str.substring(7,11);
+display(str1,str2,str3);

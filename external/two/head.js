@@ -1,7 +1,5 @@
-function product(a,b){
-var c = a*b;
-return c;
-}
-function display(v1) {
-    alert("the product is = " + v1);
+function display(v1,v2,v3){
+document.write(v1 + "<br>");
+document.write(v2 + "<br>");
+document.write(v3 + "<br>");
 }
