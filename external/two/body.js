@@ -1,2 +1,2 @@
-var greeting = "Hello World !"
-message(greeting);
+var name = prompt("Enter your Name", "");
+display(name);

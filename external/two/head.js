@@ -1,3 +1,3 @@
-function message(v1){
-    alert(v1);
+function display(v1) {
+    alert("Hello and Welcome " + v1);
 }
