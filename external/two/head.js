@@ -1,3 +1,4 @@
-function display(v1) {
-    alert("Hello and Welcome " + v1);
+function start() {
+    var uName = prompt("Enter username","");
+    return uName;
 }
