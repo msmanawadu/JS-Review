@@ -1,4 +1,3 @@
-function buttonClick(){
-    window.alert("Welcome to NIBM !");
-    document.bgColor = "yellow";
+function windowResize(){
+    window.alert("You are resizing the window !");
 }
