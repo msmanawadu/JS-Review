@@ -1,6 +1,4 @@
-function mouseover(){
-    document.bgColor = "red";
-}
-function mouseout(){
+function buttonClick(){
+    window.alert("Welcome to NIBM !");
     document.bgColor = "yellow";
 }
