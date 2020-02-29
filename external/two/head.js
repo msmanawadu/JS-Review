@@ -1,3 +1,6 @@
-function windowResize(){
-    window.alert("You are resizing the window !");
+function btn1(){
+    window.close();
+}
+function btn2(){
+    window.resizeTo(300,300);
 }
